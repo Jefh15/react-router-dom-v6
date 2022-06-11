@@ -1,14 +1,18 @@
-import React from 'react'
+// importo mi componente
+import Navbar from "./components/Navbar";
 
 const App = () => {
-
-
-
     return (
-        <div>
-            <h1>App</h1>
-        </div>
-    )
-}
 
-export default App
+        <div>
+            {/* importo mi componente */}
+            <Navbar />
+            {/* HAgo mi contenedor debajo */}
+            <div className="container">
+                <h1>App</h1>
+            </div>
+        </div>
+    );
+};
+
+export default App;
