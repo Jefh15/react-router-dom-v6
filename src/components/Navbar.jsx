@@ -1,5 +1,5 @@
 // para poder crear los links a mis paginas
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -22,30 +22,32 @@ const Navbar = () => {
                 className="container">
                 {/* creo mis link para poder hacer mis rutas */}
                 {/* Link -----> ES mi ancla */}
-                <Link
+                {/* NavLink -----> es un Link pero permite hacer un estilo de active en el boton como que se selecciono */}
+
+                <NavLink
                     // clases
                     className="btn btn-outline-dark"
                     // redireccione href es reemplazado por mi to
                     to="/">
                     {/* uso mi componente */}
                     Inicio
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     // clases
                     className="btn btn-outline-dark"
                     // redireccione a
                     to="/blog">
                     {/* uso mi componente */}
                     Blog
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     // clases
                     className="btn btn-outline-dark"
                     // redireccione a
                     to="/contacto">
                     {/* uso mi componente */}
                     Contacto
-                </Link>
+                </NavLink>
             </div>
         </nav>
     );
