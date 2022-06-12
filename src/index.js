@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Inicio from './routes/Inicio.jsx';
 import Blog from './routes/Blog';
 import Contacto from './routes/Contacto';
+import NotFound404 from './routes/NotFound404.jsx';
 
 
 
@@ -50,6 +51,12 @@ root.render(
           path='/contacto'
           // el componente a pintar
           element={<Contacto />}
+        />
+        <Route
+          // recibe el path ---> * --> comodin ---> que no coincida con alguna ruta de las especificadas muestre el componente 404
+          path='*'
+          // el componente a pintar
+          element={<NotFound404 />}
         />
       </Route>
     </Routes>
