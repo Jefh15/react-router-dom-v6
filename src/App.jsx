@@ -1,17 +1,20 @@
+// importo mi ruta anidada
+import { Outlet } from 'react-router'
 // importo mi componente
 import Navbar from "./components/Navbar";
 
 const App = () => {
     return (
 
-        <div>
+        <>
             {/* importo mi componente */}
             <Navbar />
             {/* HAgo mi contenedor debajo */}
             <div className="container">
-                <h1>App</h1>
+                {/* mis rutas se posicionan aqui dentro, porque esta es mi plantilla app.jsx */}
+                <Outlet />
             </div>
-        </div>
+        </>
     );
 };
 

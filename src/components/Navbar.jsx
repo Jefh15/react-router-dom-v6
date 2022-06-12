@@ -1,9 +1,6 @@
 // para poder crear los links a mis paginas
 import { Link } from "react-router-dom";
-// importo mis componentes
-import Blog from "./Blog";
-import Contacto from "./Contacto";
-import Inicio from "./Inicio";
+
 
 
 
@@ -31,7 +28,7 @@ const Navbar = () => {
                     // redireccione href es reemplazado por mi to
                     to="/">
                     {/* uso mi componente */}
-                    <Inicio />
+                    Inicio
                 </Link>
                 <Link
                     // clases
@@ -39,7 +36,7 @@ const Navbar = () => {
                     // redireccione a
                     to="/blog">
                     {/* uso mi componente */}
-                    <Blog />
+                    Blog
                 </Link>
                 <Link
                     // clases
@@ -47,7 +44,7 @@ const Navbar = () => {
                     // redireccione a
                     to="/contacto">
                     {/* uso mi componente */}
-                    <Contacto />
+                    Contacto
                 </Link>
             </div>
         </nav>
