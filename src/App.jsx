@@ -4,13 +4,15 @@ import { Outlet } from 'react-router'
 import Navbar from "./components/Navbar";
 
 const App = () => {
+
+
     return (
 
         <>
             {/* importo mi componente */}
             <Navbar />
             {/* HAgo mi contenedor debajo */}
-            <div className="container">
+            <div className="container bg-secondary text-white">
                 {/* mis rutas se posicionan aqui dentro, porque esta es mi plantilla app.jsx */}
                 <Outlet />
             </div>
