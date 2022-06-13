@@ -12,7 +12,7 @@ const App = () => {
             {/* importo mi componente */}
             <Navbar />
             {/* HAgo mi contenedor debajo */}
-            <div className="container bg-secondary text-white">
+            <div className="container">
                 {/* mis rutas se posicionan aqui dentro, porque esta es mi plantilla app.jsx */}
                 <Outlet />
             </div>

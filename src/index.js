@@ -10,11 +10,12 @@ import {
 } from 'react-router-dom';
 // importo bootstrap instalado a mi aplicacion
 import 'bootstrap/dist/css/bootstrap.min.css'
-// importo mis rutas
+// importo mis rutas o VISTAS
 import Inicio from './routes/Inicio.jsx';
 import Blog from './routes/Blog';
 import Contacto from './routes/Contacto';
 import NotFound404 from './routes/NotFound404.jsx';
+import Post from './routes/Post.jsx';
 
 
 
@@ -40,18 +41,10 @@ root.render(
           // el componente a pintar
           element={<Inicio />}
         />
-        <Route
-          // recibe el path ---> la url
-          path='/blog'
-          // el componente a pintar
-          element={<Blog />}
-        />
-        <Route
-          // recibe el path ---> la url
-          path='/contacto'
-          // el componente a pintar
-          element={<Contacto />}
-        />
+        <Route path='/blog' element={<Blog />} />
+        {/* /blog/:id ----? le decimos que vamos a utilizar un dato dinamico */}
+        <Route path='/blog/:id' element={<Post />} />
+        <Route path='/contacto' element={<Contacto />} />
         <Route
           // recibe el path ---> * --> comodin ---> que no coincida con alguna ruta de las especificadas muestre el componente 404
           path='*'

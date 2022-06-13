@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 
@@ -12,8 +12,6 @@ export const useFetch = (url) => {
     const [error, setError] = useState('')
     // necesitamos hacer el loading de carga
     const [loading, setLoading] = useState(false)
-
-
 
     // use effect para que cuando cargue
     useEffect(() => {

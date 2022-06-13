@@ -1,4 +1,5 @@
-import React from 'react'
+
+import { Link } from 'react-router-dom'
 import { useFetch } from '../hooks/useFetch'
 
 const Blog = () => {
@@ -8,6 +9,7 @@ const Blog = () => {
     // url ---> https://jsonplaceholder.typicode.com/posts
     const { data, error, loading } = useFetch('https://jsonplaceholder.typicode.com/posts')
 
+    // console.log(data)
 
     // compruebo si loading esta en true
     if (loading) {
@@ -31,15 +33,28 @@ const Blog = () => {
             {/* despues que cargue, si no hay error, la podemos iterar */}
             {
                 data.map((item, index) => (
+
+
                     // retorno en un h4
-                    <h4
+                    < h4
                         // le pongo su key
                         key={item.id}
-                    >{item.id} - {item.title}</h4>
+                    >
+                        {/* // para poder hacer clickeable mi item debo hacer un Link */}
+                        < Link
+                            // to ---> para que se vaya a alguna ruta
+                            // `` ---> porque vamos a hacer una interpolacion
+                            // `/blog/${item.id}` ----> pero para empujarlo debemos hacer esas rutas dinamicas en el index
+                            to={`/blog/${item.id}`}
+                        >
+                            {/* DENTRO PINTO LA INFO */}
+                            {item.id} - {item.title}
+                        </Link>
+                    </h4 >
                 ))
             }
 
-        </div>
+        </div >
     )
 }
 
